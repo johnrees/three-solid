@@ -1,0 +1,28 @@
+{
+  "name": "three-solid",
+  "version": "0.0.1",
+  "description": "Fork of https://github.com/chandlerprall/ThreeCSG",
+  "scripts": {
+    "build": "rm -rf lib && rollup -c && tsc --module commonjs --outDir lib/cjs && tsc --module es6 --outDir lib/es6"
+  },
+  "main": "lib/cjs/index.js",
+  "module": "lib/es6/index.js",
+  "typings": "lib/cjs/index.d.ts",
+  "types": "lib/cjs/index.d.ts",
+  "keywords": [],
+  "author": "John Rees <john@bitsushi.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1",
+    "rollup": "^0.54.0",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-node-resolve": "^3.0.2",
+    "rollup-plugin-typescript": "^0.8.1",
+    "three": "^0.89.0"
+  },
+  "peerDependencies": {
+    "three": "^0.89.0"
+  },
+  "dependencies": {}
+}
