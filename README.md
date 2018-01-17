@@ -12,6 +12,14 @@ _Not yet ready for general use._
 
 `npm install three-solid`
 
+or
+
+`<script src="https://unpkg.com/three-solid@latest/dist/three-solid.min.js"></script>`
+
+## Example
+
+https://johnrees.github.io/three-solid
+
 ## Output
 
 Running `yarn run build` will create a dist folder with the following files.
