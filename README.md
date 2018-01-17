@@ -10,10 +10,15 @@ _Not yet ready for general use._
 
 ## Usage
 
-Running `yarn run build` will create a lib folder with the following outputs.
+`npm install three-solid`
+
+## Output
+
+Running `yarn run build` will create a dist folder with the following files.
 
 Build Format | Location
 -------------|---------
-umd | `lib/umd.js`
-commonjs | `lib/cjs/index.js`
-es6 | `lib/es6/index.js`
+umd | `dist/three-solid.js`
+umd (minified) | `dist/three-solid.min.js`
+commonjs | `dist/cjs/index.js`
+es6 | `dist/es6/index.js`
