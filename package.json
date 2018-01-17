@@ -3,23 +3,30 @@
   "version": "0.0.1",
   "description": "Fork of https://github.com/chandlerprall/ThreeCSG",
   "scripts": {
-    "build": "rm -rf lib && rollup -c && tsc --module commonjs --outDir lib/cjs && tsc --module es6 --outDir lib/es6"
+    "clean": "rimraf dist",
+    "build": "yarn run build:commonjs && yarn run build:es6 && yarn run build:umd",
+    "build:commonjs": "tsc --module commonjs --outDir dist/cjs",
+    "build:es6": "tsc --module es6 --outDir dist/es6 --target es6",
+    "build:umd": "rollup -c && uglifyjs --compress --mangle -- dist/three-solid.js > dist/three-solid.min.js"
   },
-  "main": "lib/cjs/index.js",
-  "module": "lib/es6/index.js",
-  "typings": "lib/cjs/index.d.ts",
-  "types": "lib/cjs/index.d.ts",
+  "main": "dist/cjs/index.js",
+  "module": "dist/es6/index.js",
+  "typings": "dist/cjs/index.d.ts",
+  "types": "dist/cjs/index.d.ts",
   "keywords": [],
   "author": "John Rees <john@bitsushi.com>",
   "license": "MIT",
   "devDependencies": {
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-preset-env": "^1.6.1",
+    "rimraf": "^2.6.2",
     "rollup": "^0.54.0",
     "rollup-plugin-babel": "^3.0.3",
     "rollup-plugin-node-resolve": "^3.0.2",
     "rollup-plugin-typescript": "^0.8.1",
-    "three": "^0.89.0"
+    "three": "^0.89.0",
+    "typescript": "^2.6.2",
+    "uglify-js": "^3.3.7"
   },
   "peerDependencies": {
     "three": "^0.89.0"

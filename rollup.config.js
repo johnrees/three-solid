@@ -7,13 +7,13 @@ export default {
   output: [
     {
       format: 'umd',
-      file: 'lib/umd.js',
-      name: 'ThreeBSP'
+      file: 'dist/three-solid.js',
+      name: 'ThreeSolid'
     },
-    {
-      format: 'es',
-      file: 'lib/module.js'
-    }
+    // {
+    //   format: 'es',
+    //   file: 'es6/index.js'
+    // }
   ],
   plugins: [
     typescript(),

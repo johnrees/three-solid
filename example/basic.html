@@ -4,7 +4,7 @@
   <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width'>
   <script type="text/javascript" src="https://rawgit.com/mrdoob/three.js/master/build/three.min.js"></script>
-  <script type="text/javascript" src="../lib/umd.js"></script>
+  <script type="text/javascript" src="../dist/three-solid.min.js"></script>
 
   <script type="text/javascript">
     var renderer, scene, camera, light;
@@ -39,11 +39,11 @@
         var cube_geometry = new THREE.CubeGeometry(3, 3, 3);
         var cube_mesh = new THREE.Mesh(cube_geometry);
         cube_mesh.position.x = -7;
-        var cube_bsp = new ThreeBSP(cube_mesh);
+        var cube_bsp = new ThreeSolid(cube_mesh);
         var sphere_geometry = new THREE.SphereGeometry(1.8, 32, 32);
         var sphere_mesh = new THREE.Mesh(sphere_geometry);
         sphere_mesh.position.x = -7;
-        var sphere_bsp = new ThreeBSP(sphere_mesh);
+        var sphere_bsp = new ThreeSolid(sphere_mesh);
 
         var subtract_bsp = cube_bsp.subtract(sphere_bsp);
         var result = subtract_bsp.toMesh(material);

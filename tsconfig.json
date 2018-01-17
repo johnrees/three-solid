@@ -6,7 +6,6 @@
     "sourceMap": true,
     "declaration": true,
     "noImplicitAny": false,
-    "strictNullChecks": false,
     "suppressImplicitAnyIndexErrors": true,
     "moduleResolution": "node",
     "target": "es5"
